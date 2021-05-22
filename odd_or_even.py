@@ -7,7 +7,7 @@ Input: 25
 Output: That's an odd number! Have another?
 """
 
-print("Welcome to my game. Please choose a number between 1 and 1000: ")
+print("Welcome to my game! Please choose a number between 1 and 1000! Enter 'done' to exit")
 
 while True:
     number = input("> ")
@@ -18,14 +18,17 @@ while True:
         numberint = int(number)
     except:
         print("This is not a number. Please give me a number!")
+        continue
+    if numberint<1 or numberint>1000:
+        print("The number is outside the range 1--1000")
+        continue
     if numberint%2==0:
         print("That's an even number! Have another? ")
-        number
+        #number
         continue
     elif numberint%2!=0:
         print("That's an odd number! Have another?")
-        number
+        #number
         continue
-
     else:
         break
