@@ -34,7 +34,9 @@ while True:
         print("Do you want to keep playing or would you like to quit?")
         print("Enter 'keep playing' , 'quit', or a number.")
         continue
-    if numberint==n:
+    elif numberint==n:
         print("Congratulations! You've guessed the number!")
         print(f"You had {count} attempts.")
+        break
+    else:
         break
