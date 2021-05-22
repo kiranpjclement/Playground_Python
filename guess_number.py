@@ -10,12 +10,13 @@ Finally, when the user eventually guesses the right number
 
 import random
 n=random.randint(1,50)
-print(f"the random number is : {n}")
+#print(f"the random number is : {n}")
 print("Please guess a number between 1 and 50!")
-#number=input("> ")
+count=0
 
 while True:
     number = input("> ")
+    count=count+1
     if number=="keep playing":
         continue
     elif number=="quit":
@@ -24,6 +25,7 @@ while True:
         numberint=int(number)
     except:
         print("Error, this is not a number!")
+        continue
     if numberint<1 or numberint>50:
         print("Error, please choose a number within the 1-50 range!")
         continue
@@ -34,8 +36,5 @@ while True:
         continue
     if numberint==n:
         print("Congratulations! You've guessed the number!")
+        print(f"You had {count} attempts.")
         break
-
-
-
-
