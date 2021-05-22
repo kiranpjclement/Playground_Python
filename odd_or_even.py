@@ -6,21 +6,26 @@ Prompt: What number are you thinking?
 Input: 25
 Output: That's an odd number! Have another?
 """
-number = input("Welcome to my game. Please choose a number between 1 and 1000: >")
 
-#def num():
-    #number = input("Welcome to my game. Please choose a number between 1 and 1000: >")
+print("Welcome to my game. Please choose a number between 1 and 1000: ")
 
 while True:
+    number = input("> ")
+    if number=="no" or number=="done" or number=="exit" or number=="quit":
+        print("Goodbye!")
+        break
     try:
         numberint = int(number)
     except:
         print("This is not a number. Please give me a number!")
     if numberint%2==0:
-        print("That's an even number! Have another?")
-
+        print("That's an even number! Have another? ")
+        number
+        continue
     elif numberint%2!=0:
         print("That's an odd number! Have another?")
+        number
+        continue
 
     else:
         break
