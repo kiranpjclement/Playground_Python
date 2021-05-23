@@ -12,13 +12,7 @@ To go even a step further, split unevenly
 (for example, one person pays 70% of the bill while the other pays 30%)
 """
 
-print("What's the total bill for today, please?")
-bill=input("> ")
-try:
-    bill_float=float(bill)
-except:
-    print("Please enter the bill value as a number!")
-#print(f"The bill value is: {bill_float}")
+bill=float(input("What's the total bill for today, please? > "))
 
 def aroundup(a):
     if a==int(a):
@@ -26,15 +20,13 @@ def aroundup(a):
     else:
         return int(a)+1
 
-#the following 3 lines will show a float sometimes(when there is nothing to roundup)
-print(f"18% tip is {bill_float*0.18}, which brings your total to {int(aroundup((bill_float*0.18)+bill_float))}.")
-print(f"20% tip is {bill_float*0.20}, which brings your total to {int(aroundup((bill_float*0.20)+bill_float))}.")
-print(f"25% tip is {bill_float*0.25}, which brings your total to {int(aroundup((bill_float*0.25)+bill_float))}.")
+print(f"18% tip is {bill*0.18}, which brings your total to {int(aroundup((bill*0.18)+bill))}.")
+print(f"20% tip is {bill*0.20}, which brings your total to {int(aroundup((bill*0.20)+bill))}.")
+print(f"25% tip is {bill*0.25}, which brings your total to {int(aroundup((bill*0.25)+bill))}.")
 
-no_people=input("How many people are involved? \n>")
-no_people=int(no_people)
-print("If splitted evenly:")
-print(f"18% tip is {bill_float*0.18/no_people}/each, which brings your total to {int(aroundup((bill_float+(bill_float*0.18))/no_people))}/each.")
-print("If spliteed 30% and 70%:")
-print(f"18% tip for the 1st person is {bill_float*0.18*0.3}, which brings your total to {aroundup((bill_float+(0.18*bill_float))*0.3)}.")
-print(f"18% tip for the 2nd person is {bill_float*0.18*0.7}, which brings your total to {aroundup((bill_float+(0.18*bill_float))*0.7)}.")
+no_people=int(input("\nHow many people are involved? > "))
+print("If split evenly:")
+print(f"18% tip is {bill*0.18/no_people}/each, which brings your total to {int(aroundup((bill+(bill*0.18))/no_people))}/each.")
+print("If split 30% and 70%:")
+print(f"18% tip for the 1st person is {bill*0.18*0.3}, which brings the total to {aroundup((bill+(0.18*bill))*0.3)}.")
+print(f"18% tip for the 2nd person is {bill*0.18*0.7}, which brings the total to {aroundup((bill+(0.18*bill))*0.7)}.")
