@@ -12,18 +12,14 @@ get you the username and domain name from an email address.
 email_providers=["Outlook", "Apple", "AOL Mail", "ProtonMail", "Google", "Yahoo", "Hotmail"]
 email_domains=["@outlook.com", "@icloud.com", "@aol.com", "@protonmail.com", "@gmail.com", "@yahoo.com", "@hotmail"]
 dictio=dict(zip(email_providers, email_domains))
-#print(dictio)
 
 email=input("Please type your email address > ")
 
 #first I need to find the index for '@'
 #then slice the string by that index
 atindex=email.find('@')
-#print(atindex)
 domain=email[atindex:]
-#print(f"The domain is {domain}")
 username=email[:atindex]
-#print(username)
 #now I need to try to split a first name from the username
 if "_" in username:
     fname=username.find('_')
@@ -33,12 +29,10 @@ elif "." in username:
 if fname:
     first_name = username[:fname]
     first_namet=first_name.title()
-    #print(first_name)
 
 for k, v in dictio.items():
     if v==domain:
         dom=k
-        #print(k)
 
 if domain in email_domains:
     print(f"Hey {first_namet}, looks like your email is registered with {dom}. That's cool!")
