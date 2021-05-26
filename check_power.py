@@ -15,15 +15,14 @@ Input : 128,2, Output : True"""
 inputnoint=int(input("What number you want to check? > "))
 powernoint=int(input("You want to check if it's a power of > "))
 
-resultslist=[]
-for number in range(0, inputnoint):
-    number=number+1
-    resultpw=powernoint**number
-    resultslist.append(resultpw)
-    if resultpw>inputnoint:
-        break
-
-if inputnoint in resultslist:
-    print(f"Yes, {inputnoint} is a power of {powernoint}.")
-else:
-    print(f"No, {inputnoint} is not a power of {powernoint}.")
+def powercheck():
+    resultslist = []
+    for number in range(0, inputnoint):
+        number=number+1
+        resultpw=powernoint**number
+        resultslist.append(resultpw)
+        if resultpw > inputnoint:
+            break
+    #print(resultslist)
+    print(inputnoint in resultslist)
+powercheck()
