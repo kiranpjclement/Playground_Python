@@ -4,14 +4,12 @@ Input : 4, Output : True
 Input : 9, Output : True
 3. Write a Python program to check if a given positive integer is a power of four.  
 Input : 4, Output : True
-4. Write a Python program to check if a number is a perfect square.  
-Input : 9, Output : True
 5. Write a Python program to check if an integer is the power of another integer. 
 Input : 16, 2, Output : True
 6. Write a Python program to check if a number is a power of a given base. 
 Input : 128,2, Output : True"""
 
-#The below code will work for exercises 1, 2, 3, 5.
+#The below code will work for exercises 1, 2, 3, 5, 6.
 inputnoint=int(input("What number you want to check? > "))
 powernoint=int(input("You want to check if it's a power of > "))
 
