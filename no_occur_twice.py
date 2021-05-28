@@ -3,7 +3,7 @@ Input : [5, 3, 4, 3, 4]
 Output : 5   """
 
 
-list1=[1,3,3,5,5,6]
+list1=[5, 3, 4, 3, 4]
 list2=list1
 ouputlist=[]
 
